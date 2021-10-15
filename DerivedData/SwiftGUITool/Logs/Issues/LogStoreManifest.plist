@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>logFormatVersion</key>
+	<integer>10</integer>
+	<key>logs</key>
+	<dict>
+		<key>41E111BE-8324-4735-8C95-BD3DB23F95F8</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogMajorGroupSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.target.product-type.application</string>
+			<key>fileName</key>
+			<string>41E111BE-8324-4735-8C95-BD3DB23F95F8.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>signature</key>
+			<string>SwiftGUITool-gewyligkgkoercdgqmbxrqnunnrh</string>
+			<key>timeStartedRecording</key>
+			<real>656007067.83954501</real>
+			<key>timeStoppedRecording</key>
+			<real>656007070.78198099</real>
+			<key>title</key>
+			<string>Build target SwiftGUITool</string>
+			<key>uniqueIdentifier</key>
+			<string>41E111BE-8324-4735-8C95-BD3DB23F95F8</string>
+		</dict>
+		<key>51156606-78D2-4683-86D5-378A4E490E44</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogMajorGroupSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.target.product-type.bundle</string>
+			<key>fileName</key>
+			<string>51156606-78D2-4683-86D5-378A4E490E44.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>signature</key>
+			<string>SwiftGUIToolTests-gewyligkgkoercdgqmbxrqnunnrh</string>
+			<key>timeStartedRecording</key>
+			<real>655920375.79136705</real>
+			<key>timeStoppedRecording</key>
+			<real>655920377.37377298</real>
+			<key>title</key>
+			<string>Build target SwiftGUIToolTests</string>
+			<key>uniqueIdentifier</key>
+			<string>51156606-78D2-4683-86D5-378A4E490E44</string>
+		</dict>
+		<key>5482D930-FEFD-4C85-861B-FD895FE8932F</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogMajorGroupSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.target.product-type.bundle</string>
+			<key>fileName</key>
+			<string>5482D930-FEFD-4C85-861B-FD895FE8932F.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>signature</key>
+			<string>SwiftGUIToolUITests-gewyligkgkoercdgqmbxrqnunnrh</string>
+			<key>timeStartedRecording</key>
+			<real>655920364.67226195</real>
+			<key>timeStoppedRecording</key>
+			<real>655920383.83034503</real>
+			<key>title</key>
+			<string>Build target SwiftGUIToolUITests</string>
+			<key>uniqueIdentifier</key>
+			<string>5482D930-FEFD-4C85-861B-FD895FE8932F</string>
+		</dict>
+	</dict>
+	<key>preserveOldLogs</key>
+	<true/>
+</dict>
+</plist>

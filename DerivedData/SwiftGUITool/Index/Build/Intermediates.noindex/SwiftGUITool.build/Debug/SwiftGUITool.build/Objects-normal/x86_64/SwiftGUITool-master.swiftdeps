@@ -1,0 +1,14 @@
+version: "Apple Swift version 5.5 (swiftlang-1300.0.31.1 clang-1300.0.29.1)"
+options: "8c4cc6af5aa52971e01f674ffd838d93ae7f5fc1782ce61508382f6e0020383f"
+build_start_time: [1634227525, 162821054]
+build_end_time: [1634227532, 367902040]
+inputs:
+  ? "/Users/Anzer/Documents/SwiftGUITool/DerivedData/SwiftGUITool/Index/Build/Intermediates.noindex/SwiftGUITool.build/Debug/SwiftGUITool.build/DerivedSources/CoreDataGenerated/SwiftGUITool/Item+CoreDataClass.swift"
+  : [1634227524, 713260173]
+  ? "/Users/Anzer/Documents/SwiftGUITool/DerivedData/SwiftGUITool/Index/Build/Intermediates.noindex/SwiftGUITool.build/Debug/SwiftGUITool.build/DerivedSources/CoreDataGenerated/SwiftGUITool/Item+CoreDataProperties.swift"
+  : [1634227524, 714676856]
+  ? "/Users/Anzer/Documents/SwiftGUITool/DerivedData/SwiftGUITool/Index/Build/Intermediates.noindex/SwiftGUITool.build/Debug/SwiftGUITool.build/DerivedSources/CoreDataGenerated/SwiftGUITool/SwiftGUITool+CoreDataModel.swift"
+  : [1634227524, 671831130]
+  "/Users/Anzer/Documents/SwiftGUITool/SwiftGUITool/ContentView.swift": [1634227508, 658344268]
+  "/Users/Anzer/Documents/SwiftGUITool/SwiftGUITool/Persistence.swift": [1634227510, 725209236]
+  "/Users/Anzer/Documents/SwiftGUITool/SwiftGUITool/SwiftGUIToolApp.swift": [1634227508, 643839359]

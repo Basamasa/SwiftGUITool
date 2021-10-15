@@ -1,0 +1,6 @@
+version: "Apple Swift version 5.5 (swiftlang-1300.0.31.1 clang-1300.0.29.1)"
+options: "06b6b43a5cc4de0ffe9527a8998255d4e1a2ab4bfc31bf2e506095cad35deb89"
+build_start_time: [1634227575, 897523880]
+build_end_time: [1634227576, 826647043]
+inputs:
+  "/Users/Anzer/Documents/SwiftGUITool/SwiftGUIToolTests/SwiftGUIToolTests.swift": [1634227511, 136718750]
