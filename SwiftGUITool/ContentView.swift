@@ -20,6 +20,7 @@ struct ContentView: View {
 
     var body: some View {
         NavigationView {
+			
             List {
             }
             .toolbar {
@@ -29,6 +30,7 @@ struct ContentView: View {
                     }
                 }
             }
+			
             HStack {
                 VStack {
                     Text("Swift script")
