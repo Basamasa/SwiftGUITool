@@ -1,6 +1,0 @@
-Target dependency graph (3 targets)
-SwiftGUITool in SwiftGUITool, no dependencies
-SwiftGUIToolTests in SwiftGUITool, depends on:
-SwiftGUITool in SwiftGUITool (explicit)
-SwiftGUIToolUITests in SwiftGUITool, depends on:
-SwiftGUITool in SwiftGUITool (explicit)

@@ -20,6 +20,10 @@ class TextHighlight {
 		return try! NSRegularExpression(pattern: "\"[^_]+\"", options: [])
 	}
 	
+	static func uppercasePattern() -> NSRegularExpression {
+		return try! NSRegularExpression(pattern: "\\b[A-Z]+[0-9]+\\b", options: [])
+	}
+	
 	static func highlightRuleRed(_ word: String) -> HighlightRule {
 		return HighlightRule(pattern: createPattern(word: word), formattingRules: [
 			TextFormattingRule(fontTraits: [.bold]),
@@ -30,6 +34,13 @@ class TextHighlight {
 	static func ruleDeleteUnusedCode() -> NSRegularExpression {
 		return createPattern(word: "Failed to open macho file at /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift for reading: Too many levels of symbolic links")
 	}
+	
+	static let ruleUppercase: [HighlightRule] = [
+		HighlightRule(pattern: uppercasePattern(), formattingRules: [
+			TextFormattingRule(fontTraits: [.bold]),
+			TextFormattingRule(key: .foregroundColor, value: NSColor.blue)
+		]),
+	]
 	
 	static let ruleString: [HighlightRule] = [
 		HighlightRule(pattern: stringPattern(), formattingRules: [
@@ -46,7 +57,8 @@ class TextHighlight {
 		highlightRuleRed("if"),highlightRuleRed("else"),
 		highlightRuleRed("for"),highlightRuleRed("true"),
 		highlightRuleRed("false"),highlightRuleRed("float"),
-		highlightRuleRed("long")
+		highlightRuleRed("long"), highlightRuleRed("try"),
+		highlightRuleRed("struct"), highlightRuleRed("init"),
 	]
 	
 }

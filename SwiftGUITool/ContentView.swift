@@ -29,7 +29,9 @@ struct ContentView: View {
 	
 	@State private var output: String = ""
 		
-	private let rules: [HighlightRule] = TextHighlight.rule1 + TextHighlight.ruleString
+	@State private var running: Bool = false
+	
+	private let rules: [HighlightRule] = TextHighlight.rule1
 	
 	func onEditingChanged() {
 		print("editing changed")
@@ -53,15 +55,21 @@ struct ContentView: View {
 			
             List {
 				Button(action: switchFile) {
-					Text("swiftText.swift")
+					Text("foo.swift")
 				}
 				.buttonStyle(PlainButtonStyle())
             }
             .toolbar {
                 ToolbarItem {
-					Button(action: run) {
-                        Label("Run", systemImage: "play.fill")
-                    }
+					if running {
+						Button(action: run) {
+							Label("Pause", systemImage: "pause.fill")
+						}
+					} else {
+						Button(action: run) {
+							Label("Run", systemImage: "play.fill")
+						}
+					}
                 }
             }
 			
@@ -101,15 +109,22 @@ struct ContentView: View {
 							Image(systemName: "trash")
 						}
 						.buttonStyle(PlainButtonStyle())
+						if running {
+							ProgressView()
+								.scaleEffect(0.5, anchor: .center)
+						}
 					}
 					ScrollView {
-						TextField("", text: .constant(output)) 
-							.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
-							.padding()
-							.background(Color(.secondaryLabelColor))
-							.cornerRadius(16)
-							.padding(.bottom, 16)
+						TextField("", text: .constant(output))
+						if running {
+							Text("Running...")
+						}
 					}
+					.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+					.padding()
+					.background(Color(.secondaryLabelColor))
+					.cornerRadius(16)
+					.padding(.bottom, 16)
 				}
             }
             .font(.title2)
@@ -126,9 +141,17 @@ struct ContentView: View {
 	}
 	
 	private func run () {
-		safeFile()
-		// Go to Documents, then change file permission, then run the swift file
-		shell(["cd Users/" + NSUserName() + "/Documents" + "&& chmod 755 swiftText.swift && ./swiftText.swift"])
+		running = true
+		DispatchQueue.background(background: {
+			// In background
+			safeFile()
+			// Go to Documents, then change file permission, then run the swift file(Because macOS home has no write permisson)
+			shell(["cd Users/" + NSUserName() + "/Documents" + "&& chmod 755 foo.swift && ./foo.swift"])
+		}, completion:{
+			// when background job finished, do something in main thread
+			running = false
+			print("Finished")
+		})
 	}
 	
     private func safeFile() {
@@ -137,7 +160,7 @@ struct ContentView: View {
 		let documentsUrl = FileManager.default.urls(for: .documentDirectory, in: .allDomainsMask)[0] as NSURL
 
 		// add a filename
-		let fileUrl = documentsUrl.appendingPathComponent("swiftText.swift")
+		let fileUrl = documentsUrl.appendingPathComponent("foo.swift")
 
 		safedText = "#!/usr/bin/env swift \n" + swiftText
 		// write to it
@@ -158,16 +181,32 @@ struct ContentView: View {
 		let data = pipe.fileHandleForReading.readDataToEndOfFile()
 		var output = String(data: data, encoding: .utf8)!
 		  
-		print(output)
 		let regex = TextHighlight.ruleDeleteUnusedCode()
 		
 		let machedOutputs = regex.matches(in: output, range: NSRange(output.startIndex..., in: output)).map{String(output[Range($0.range, in: output)!])}
 				
-		if let range = output.range(of: machedOutputs[0]) {
-			output.removeSubrange(range)
+		if machedOutputs.count > 0 {
+			if let range = output.range(of: machedOutputs[0]) {
+				output.removeSubrange(range)
+			}
 		}
 		self.output += output
 	}
+}
+
+extension DispatchQueue {
+
+	static func background(delay: Double = 0.0, background: (()->Void)? = nil, completion: (() -> Void)? = nil) {
+		DispatchQueue.global(qos: .background).async {
+			background?()
+			if let completion = completion {
+				DispatchQueue.main.asyncAfter(deadline: .now() + delay, execute: {
+					completion()
+				})
+			}
+		}
+	}
+
 }
 
 struct ContentView_Previews: PreviewProvider {
