@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		15E9A3A32721BD9600F00504 /* TextHighlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E9A3A22721BD9500F00504 /* TextHighlight.swift */; };
 		2CE13862801036F1A89820F6 /* Pods_SwiftGUITool.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8F3D28310BBBECC53900625 /* Pods_SwiftGUITool.framework */; };
 		3AE6CFC0EED3DC0C3D00DA70 /* Pods_SwiftGUITool_SwiftGUIToolUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1E117D017F202AE7C5E20AD /* Pods_SwiftGUITool_SwiftGUIToolUITests.framework */; };
 		D63502F227188CB400AA29F6 /* SwiftGUIToolApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63502F127188CB400AA29F6 /* SwiftGUIToolApp.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		15E9A3A22721BD9500F00504 /* TextHighlight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextHighlight.swift; sourceTree = "<group>"; };
 		172179836726CCC5325BDF5D /* Pods-SwiftGUITool-SwiftGUIToolUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftGUITool-SwiftGUIToolUITests.release.xcconfig"; path = "Target Support Files/Pods-SwiftGUITool-SwiftGUIToolUITests/Pods-SwiftGUITool-SwiftGUIToolUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4079F07A01C14AFCA4C23C98 /* Pods-SwiftGUITool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftGUITool.release.xcconfig"; path = "Target Support Files/Pods-SwiftGUITool/Pods-SwiftGUITool.release.xcconfig"; sourceTree = "<group>"; };
 		6B7B6FEBE6F8E66D17C74823 /* Pods-SwiftGUITool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftGUITool.debug.xcconfig"; path = "Target Support Files/Pods-SwiftGUITool/Pods-SwiftGUITool.debug.xcconfig"; sourceTree = "<group>"; };
@@ -111,7 +113,6 @@
 				B02300AAB68056F006AA5D2A /* Pods-SwiftGUIToolTests.debug.xcconfig */,
 				B12227DD2F0B59A228CAEE72 /* Pods-SwiftGUIToolTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -142,6 +143,7 @@
 			children = (
 				D63502F127188CB400AA29F6 /* SwiftGUIToolApp.swift */,
 				D63502F327188CB400AA29F6 /* ContentView.swift */,
+				15E9A3A22721BD9500F00504 /* TextHighlight.swift */,
 				D63502F527188CB600AA29F6 /* Assets.xcassets */,
 				D63502FA27188CB600AA29F6 /* Persistence.swift */,
 				D63502FF27188CB600AA29F6 /* SwiftGUITool.entitlements */,
@@ -415,6 +417,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D63502FB27188CB600AA29F6 /* Persistence.swift in Sources */,
+				15E9A3A32721BD9600F00504 /* TextHighlight.swift in Sources */,
 				D63502FE27188CB600AA29F6 /* SwiftGUITool.xcdatamodeld in Sources */,
 				D63502F427188CB400AA29F6 /* ContentView.swift in Sources */,
 				D63502F227188CB400AA29F6 /* SwiftGUIToolApp.swift in Sources */,
